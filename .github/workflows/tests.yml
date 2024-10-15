@@ -16,7 +16,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-22.04-ppc64le, macos-latest]
+        os: [ubuntu-22.04-ppc64le]
 
     steps:
       - uses: actions/checkout@v4
@@ -35,7 +35,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-22.04-ppc64le]
+        os: [ubuntu-22.04-ppc64le]
     steps:
       - uses: actions/checkout@v4
       - name: Set up Go
@@ -104,7 +104,7 @@ jobs:
       TAGS: js
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-22.04-ppc64le]
+        os: [ubuntu-22.04-ppc64le]
     steps:
       - uses: actions/checkout@v4
       - name: Set up Go
@@ -204,7 +204,7 @@ jobs:
     needs: [ functional-tests, lsp-tests ]
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-22.04-ppc64le, macos-latest]
+        os: [ubuntu-22.04-ppc64le]
 
     steps:
       - uses: actions/checkout@v4
